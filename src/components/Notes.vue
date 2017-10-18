@@ -4,7 +4,7 @@
       <i class="paw icon"></i>
       Ninghao Notes App _ Vue.js
     </h4>
-    <a class="ui right floated basic violet button">
+    <a class="ui right floated basic violet button" v-on:click="create">
       添加笔记
     </a>
     <div class="ui divided items">
@@ -31,7 +31,8 @@ export default {
   },
   methods: {
     ...mapActions([
-      'initial'
+      'initial',
+      'create'
     ])
   },
   computed: {
