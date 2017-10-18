@@ -10,7 +10,8 @@
     <div class="ui divided items">
       <note
         v-for="entity in entities"
-        v-bind:entity="entity">
+        v-bind:entity="entity"
+        v-bind:key="entity.$loki">
       </note>
       <span
         class="ui small disabled header"
