@@ -8,7 +8,7 @@
         {{ entity.body || '新建笔记' }}
       </div>
       <div class="extra">
-        <editor>
+        <editor v-bind:entity="entity">
         </editor>
         {{ 'words' }} 字
         <i class="right floated trash outline icon">

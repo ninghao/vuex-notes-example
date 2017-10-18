@@ -5,3 +5,7 @@ export const initial = ({ commit }) => {
 export const create = ({ commit }) => {
   commit('createEntity')
 }
+
+export const update = ({ commit }, entity) => {
+  commit('updateEntity', entity)
+}
