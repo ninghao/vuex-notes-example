@@ -1,6 +1,9 @@
 <template lang="html">
-  <div>
-    <textarea name="name" rows="8" cols="80"></textarea>
+  <div class="ui form">
+    <div class="field">
+      <textarea>
+      </textarea>
+    </div>
   </div>
 </template>
 
