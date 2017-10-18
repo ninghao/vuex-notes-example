@@ -1,16 +1,16 @@
 <template lang="html">
   <div class="item">
     <div class="meta">
-      {{ 'updated' }}
+      {{ updated(entity) }}
     </div>
     <div class="content">
       <div class="header">
-        {{ entity.body || '新建笔记' }}
+        {{ header(entity) || '新建笔记' }}
       </div>
       <div class="extra">
         <editor v-bind:entity="entity">
         </editor>
-        {{ 'words' }} 字
+        {{ words(entity) }} 字
         <i class="right floated trash outline icon">
         </i>
       </div>
@@ -20,8 +20,16 @@
 
 <script>
 import Editor from './Editor'
+import { mapGetters } from 'vuex'
 
 export default {
+  computed: {
+    ...mapGetters([
+      'updated',
+      'words',
+      'header'
+    ])
+  },
   props: [
     'entity'
   ],
